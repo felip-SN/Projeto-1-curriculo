@@ -1,0 +1,36 @@
+main{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+}
+
+.contato{
+    border-bottom: 1px solid black;
+
+    text-align: center;
+}
+
+.resumo{
+    text-align: justify;
+    text-justify: inter-word;
+
+    border-bottom: 1px solid black;
+}
+
+.experiencia{
+    text-align: start;
+
+    border-bottom: 1px solid black;
+}
+
+.educacao{
+    text-align: start;
+}
+
+@media (max-width: 900px){
+    main{
+        width: fit-content;
+    }
+}
