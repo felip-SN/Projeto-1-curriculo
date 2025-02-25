@@ -1,5 +1,5 @@
 <main>
-    <header>
+    <!-- <header>
         <h1>Felipe Santos Nascimento</h1>
     </header>
 
@@ -94,5 +94,16 @@
                 Previsão de Conclusão: 2026
             </p>
         </div>
-    </section>
+    </section> -->
+
+    <div id="container">
+        <div class="item" 
+        [ngClass]="{active: item.active}"
+        *ngFor="let item of items; let index = index">
+            <div class="heading" (click)="itemClicked(index)">{{item.title}}</div>
+            <div class="content">
+                {{ item.content }}
+            </div>
+        </div>
+    </div>
 </main>

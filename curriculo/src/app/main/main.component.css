@@ -65,3 +65,30 @@ main{
         width: fit-content;
     }
 }
+
+#container{
+    .item{
+        .heading{
+            background-color: blue;
+            padding: 20px 20px;
+            color: white;
+            cursor: pointer;
+        }
+    
+        .content{
+            background-color: gray;
+            padding: 0px 20px;
+            border: 1px solid gray;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.2s ease-in-out;
+        }
+    }
+
+    &.active{
+        .content{
+            padding: 20px;
+            max-height: inherit;
+        }
+    }
+}
