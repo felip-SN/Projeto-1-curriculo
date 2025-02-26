@@ -9,6 +9,8 @@ main{
     padding: 15px 25px 15px 25px;
 
     border-radius: 15px;
+
+    box-shadow: 15px 5px;
 }
 
 .contato{
@@ -22,32 +24,34 @@ main{
     text-justify: inter-word;
 
     border-bottom: 1px solid black;
+}
 
-    .menu{
-        overflow-x: hidden;
 
-        label{
-            cursor: pointer;
-        }
+.menu{
+    overflow-x: hidden;
+
+    label{
+        cursor: pointer;
     }
+}
 
-    .menu-toggler{
-        display: none;
-    }
+.menu-toggler{
+    display: none;
+}
 
-    .stagger-menu li {
-        opacity: 0;
-        transform: translateX(100%);
-        transition-property: opacity, transform;
-        transition-duration: 0.3s;
-        transition-timing-function: cubic-bezier(0.750, -0.015, 0.565, 1.055);
-    }
+.stagger-menu li {
+    opacity: 0;
+    transform: translateX(100%);
+    transition-property: opacity, transform;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.750, -0.015, 0.565, 1.055);
 
-    .menu-toggler:checked ~ .stagger-menu li{
-        opacity: 1;
-        transform: translateX(0);
-        transition-delay: calc(0.055s * var(--i));
-    }
+}
+
+.menu-toggler:checked ~ .stagger-menu li{
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: calc(0.055s * var(--i));
 }
 
 .experiencia{
@@ -60,35 +64,38 @@ main{
     text-align: start;
 }
 
+.test{
+    list-style-type: none;
+}
+
+.main-title{
+    margin-bottom: 0px;
+}
+
+.sub{
+    margin-top: -1rem;
+}
+
 @media (max-width: 900px){
     main{
         width: fit-content;
     }
 }
 
-#container{
-    .item{
-        .heading{
-            background-color: blue;
-            padding: 20px 20px;
-            color: white;
-            cursor: pointer;
-        }
-    
-        .content{
-            background-color: gray;
-            padding: 0px 20px;
-            border: 1px solid gray;
-            max-height: 0;
-            overflow: hidden;
-            transition: all 0.2s ease-in-out;
-        }
-    }
+.animation-color{
+    color: red;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
 
-    &.active{
-        .content{
-            padding: 20px;
-            max-height: inherit;
-        }
-    }
+.select-color:hover{
+    font-size: 20px;
+}
+
+@keyframes example{
+    0% {color: red;}
+    25% {color: yellow;}
+    50% {color: blue;}
+    100% {color: green;}
 }
